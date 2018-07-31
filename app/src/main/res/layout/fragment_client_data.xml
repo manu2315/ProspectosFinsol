@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="datosCliente"
+            type="mx.com.finsol.captura_de_prospecto_2.capturadeprospecto2.models.Prospecto"
+            />
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.ClientDataFragment">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/editText_prospect_father_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:hint="@string/prospect_father_lastname"
+            android:text="@={datosCliente.apellidoPat}"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+
+        <EditText
+            android:id="@+id/editText_prospect_mother_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:hint="@string/prospect_mother_lastname"
+            android:text="@={datosCliente.apellidoMat}"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+
+        <EditText
+            android:id="@+id/editText_prospect_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:hint="@string/prospect_name"
+            android:text="@={datosCliente.nombre}"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+
+        <EditText
+            android:id="@+id/editText_prospect_birthdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_birthdate_black_24dp"
+            android:ems="10"
+            android:hint="@string/prospect_birthdate"
+            android:text="@={datosCliente.birthdate}"
+            android:inputType="textPersonName"
+
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+        <!--android:onClick=""-->
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+
+        <EditText
+            android:id="@+id/editText_prospect_rfc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:hint="@string/prospect_rfc"
+            android:text="@={datosCliente.rfc}"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+
+    </android.support.design.widget.TextInputLayout>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@={datosCliente.genero}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</layout>
