@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import mx.com.finsol.captura_de_prospecto_2.capturadeprospecto2.R;
 import mx.com.finsol.captura_de_prospecto_2.capturadeprospecto2.databinding.FragmentClientDataBinding;
@@ -37,7 +38,7 @@ public class ClientDataFragment extends Fragment {
 
     //Vars
     private Prospecto mProspecto;
-
+    private EditText txtProsctoApellPat;
     public ClientDataFragment() {
         // Required empty public constructor
     }
@@ -73,17 +74,21 @@ public class ClientDataFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        FragmentClientDataBinding binding= DataBindingUtil.inflate(inflater,R.layout.fragment_client_data,container,false);
-        View view = binding.getRoot();
+        //FragmentClientDataBinding binding= DataBindingUtil.inflate(inflater,R.layout.fragment_client_data,container,false);
+        //View view = binding.getRoot();
 
 
 
 
-        binding.setDatosCliente(mProspecto= new Prospecto());
+        //binding.setDatosCliente(mProspecto= new Prospecto());
 
-        //View view = inflater.inflate(R.layout.fragment_client_data, container, false);
+        View view = inflater.inflate(R.layout.fragment_client_data, container, false);
 
         return view;
+    }
+
+    private void bindUi(View view){
+        txtProsctoApellPat=(EditText)view.findViewById(R.id.editText_prospect_father_lastname);
     }
     /*public View onCreateView(LayoutInflater inflater,
                          @Nullable ViewGroup container,
