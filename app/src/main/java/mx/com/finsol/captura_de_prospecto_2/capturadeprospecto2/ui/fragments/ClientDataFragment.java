@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import mx.com.finsol.captura_de_prospecto_2.capturadeprospecto2.R;
@@ -39,6 +40,7 @@ public class ClientDataFragment extends Fragment {
     //Vars
     private Prospecto mProspecto;
     private EditText txtProsctoApellPat;
+    private Button btnNext;
     public ClientDataFragment() {
         // Required empty public constructor
     }
@@ -83,12 +85,14 @@ public class ClientDataFragment extends Fragment {
         //binding.setDatosCliente(mProspecto= new Prospecto());
 
         View view = inflater.inflate(R.layout.fragment_client_data, container, false);
-
+        bindUi(view);
         return view;
     }
 
     private void bindUi(View view){
         txtProsctoApellPat=(EditText)view.findViewById(R.id.editText_prospect_father_lastname);
+        btnNext=(Button)view.findViewById(R.id.button_Next);
+
     }
     /*public View onCreateView(LayoutInflater inflater,
                          @Nullable ViewGroup container,
@@ -138,5 +142,6 @@ public class ClientDataFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+        //se pasan metodos por el main que recogera el fragment con el mListener
     }
 }
